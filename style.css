@@ -1,0 +1,714 @@
+/* --  VARIABLES -- */
+:root {
+    --bg: #0A1424;
+    --bg-panel: #0F1D33;
+    --bg-panel-2: #0C1930;
+    --grid: rgba(138, 162, 188, 0.07);
+    --ink: #E8EDF2;
+    --muted: #8AA2BC;
+    --muted-dim: #5D7590;
+    --amber: #FFB238;
+    --amber-dim: rgba(255, 178, 56, 0.35);
+    --teal: #5FE0CC;
+    --line: #23405F;
+    --line-bright: #335C82;
+    --radius: 3px;
+}
+
+/* --  GLOBAL STYLES -- */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        linear-gradient(
+            var(--grid) 1px,
+            transparent 1px
+        ) 0 0 / 40px 40px,
+
+        linear-gradient(
+            90deg,
+            var(--grid) 1px,
+            transparent 1px
+        ) 0 0 / 40px 40px,
+        var(--bg);
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+.mono {
+    font-family: "Space Mono", monospace;
+}
+
+a {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Keyboard accessibility */
+:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+}
+
+/* Main content width */
+.wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* --  NAVIGATION -- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10, 20, 36, 0.88);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+}
+
+nav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+/* Site name */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+}
+
+/* Circuit icon */
+.brand .chip {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--amber);
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.brand .chip::before,
+.brand .chip::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 1.5px;
+    background: var(--amber);
+}
+
+.brand .chip::before {
+    left: -5px;
+    top: 9px;
+}
+
+.brand .chip::after {
+    right: -5px;
+    top: 9px;
+}
+
+/* Navigation links */
+.navlinks {
+    display: flex;
+    gap: 26px;
+    font-family: "Space Mono", monospace;
+    font-size: 12.5px;
+}
+
+.navlinks a {
+    padding-bottom: 3px;
+    color: var(--muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid transparent;
+}
+
+.navlinks a:hover {
+    color: var(--amber);
+    border-bottom-color: var(--amber-dim);
+}
+
+/* --  SECTION HEADERS -- */
+.refdes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: var(--amber);
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Line after section label */
+.refdes::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            var(--line-bright),
+            transparent
+        );
+}
+
+h2.section-title {
+    margin: 0 0 28px;
+    color: var(--ink);
+    font-family: "Space Mono", monospace;
+    font-size: 26px;
+}
+
+/*  Section spacing */
+section {
+    padding: 86px 0;
+}
+
+section:not(:last-of-type) {
+    border-bottom: 1px solid var(--line);
+}
+
+/* --  HERO -- */
+.hero {
+    position: relative;
+    padding: 120px 0 90px;
+}
+
+.hero-eyebrow {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    font-family: "Space Mono", monospace;
+    font-size: clamp(34px, 6vw, 50px);
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+}
+
+.hero h1 #typing-text {
+    color: var(--amber);
+}
+
+/* Blinking cursor */
+.hero h1 .cursor {
+    color: var(--amber);
+    animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* --  LINE GRAPHIC -- */
+.scope {
+    display: block;
+    width: 100%;
+    height: 110px;
+    margin: 8px 0 34px;
+}
+
+.scope path {
+    fill: none;
+    stroke: var(--amber);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Animated waveform */
+.scope .trace-draw {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: draw 2.6s ease-out forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Oscilloscope grid */
+.scope .gridline {
+    stroke: var(--grid);
+    stroke-width: 1;
+}
+
+/* --  PINS/BUTTONS -- */
+.pinrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.pin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    color: var(--ink);
+    background: var(--bg-panel);
+    border: 1px solid var(--line-bright);
+    border-radius: var(--radius);
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+}
+
+/* Green status dot */
+.pin::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--teal);
+}
+
+.pin:hover {
+    color: var(--amber);
+    border-color: var(--amber);
+}
+
+/* --  ABOUT -- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+.about-text p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.about-text p strong {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+/* Synopsis */
+.facts {
+    padding: 20px 22px;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.facts .facts-title {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    color: var(--muted-dim);
+    font-family: "Space Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--line);
+}
+
+/* Individual fact */
+.fact-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed var(--line);
+}
+
+.fact-row:last-child {
+    border-bottom: none;
+}
+
+.fact-row .k {
+    color: var(--muted);
+
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+}
+
+.fact-row .v {
+    color: var(--ink);
+    text-align: right;
+}
+
+/* Skill/topic chips */
+.chiplist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.chip-sm {
+    padding: 4px 9px;
+    color: var(--teal);
+    border: 1px solid rgba(95, 224, 204, 0.3);
+    border-radius: 2px;
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+}
+
+/* --  EXPERIENCE -- */
+.timeline {
+    position: relative;
+    padding-left: 34px;
+}
+
+
+/* Vertical timeline line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background:
+        linear-gradient(
+            var(--line-bright),
+            var(--line) 90%
+        );
+}
+
+/* Individual timeline entry */
+.tnode {
+    position: relative;
+    padding-bottom: 34px;
+}
+
+.tnode:last-child {
+    padding-bottom: 0;
+}
+
+/* Timeline circle */
+.tnode::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 4px;
+    width: 11px;
+    height: 11px;
+    background: var(--bg);
+    border: 2px solid var(--amber);
+    border-radius: 50%;
+}
+
+.tnode .tdate {
+    margin-bottom: 4px;
+    color: var(--amber);
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.tnode .trole {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.tnode .torg {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.tnode ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+.tnode li {
+    margin-bottom: 4px;
+    font-size: 14.5px;
+}
+
+/* --  ADDITIONAL -- */
+.additional {
+    margin-top: 44px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+}
+
+.additional .refdes {
+    margin-bottom: 16px;
+}
+
+.add-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 14px;
+    background: var(--bg-panel-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font-size: 14px;
+}
+
+.add-item .role {
+    color: var(--ink);
+}
+
+.add-item .org {
+    color: var(--muted-dim);
+}
+
+.add-item .when {
+    color: var(--muted);
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+}
+
+/* --  PROJECTS -- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* Project card */
+.card {
+    position: relative;
+    padding: 22px;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition:
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.card:hover {
+    border-color: var(--amber-dim);
+    transform: translateY(-2px);
+}
+
+
+/* Project reference number */
+.card .refid {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    color: var(--amber);
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Project title */
+.card h3 {
+    margin: 0 12px 4px 0;
+    padding-right: 40px;
+    font-size: 17px;
+}
+
+/* Project date */
+.card .cdate {
+    margin-bottom: 12px;
+    color: var(--muted-dim);
+    font-family: "Space Mono", monospace;
+    font-size: 11.5px;
+}
+
+/* Project description */
+.card ul {
+    margin: 0 0 14px;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.card li {
+    margin-bottom: 5px;
+}
+
+/* Project technologies */
+.card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+/* Project links */
+.card .links {
+    display: flex;
+    gap: 14px;
+    font-family: "Space Mono", monospace;
+    font-size: 12.5px;
+}
+
+.card .links .no-link {
+    color: var(--muted-dim);
+    cursor: default;
+}
+
+.card .links .no-link:hover {
+    text-decoration: none;
+}
+
+/* --  SKILLS -- */
+.bins {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* Individual skill category */
+.bin {
+    padding: 18px;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+/* Category title */
+.bin .bin-label {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    color: var(--muted);
+    font-family: "Space Mono", monospace;
+    font-size: 11.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--line);
+}
+
+/* Override default chip spacing inside skills */
+.bin .chiplist {
+    margin-top: 0;
+}
+
+.bin .chip-sm {
+    color: var(--ink);
+    border-color: var(--line-bright);
+}
+
+/* --  FOOTER/CONTACT -- */
+footer {
+    padding: 70px 0 50px;
+}
+
+/* Contact box */
+.header-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 26px;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.header-block h3 {
+    margin: 0 0 6px;
+    font-family: "Space Mono", monospace;
+    font-size: 20px;
+}
+
+.header-block p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Copyright/footer text */
+.foot-note {
+    margin-top: 26px;
+    color: var(--muted-dim);
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* --  RESPONSIVE DESIGN -- */
+/* Smaller navigation */
+@media (max-width: 640px) {
+
+    .navlinks {
+        gap: 14px;
+        font-size: 11px;
+    }
+}
+
+/* About + skills */
+@media (max-width: 720px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bins {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Projects */
+@media (max-width: 700px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}

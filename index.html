@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Richard Wang — Electrical & Computer Engineering</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="wrap">
+            <div class="brand">
+                <span class="chip"></span>
+                RICHARD WANG
+            </div>
+            <div class="navlinks">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero wrap">
+
+        <div class="hero-eyebrow">
+            Electrical &amp; Computer Engineering &mdash; Cornell University
+        </div>
+
+        <h1>
+            Hi, I'm <span id="typing-text"></span><span class="cursor">|</span>
+        </h1>
+
+        <!--  graphic -->
+        <svg
+            class="scope"
+            viewBox="0 0 800 110"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+        >
+            <line
+                class="gridline"
+                x1="0"
+                y1="20"
+                x2="800"
+                y2="20"
+            ></line>
+            <line
+                class="gridline"
+                x1="0"
+                y1="55"
+                x2="800"
+                y2="55"
+            ></line>
+            <line
+                class="gridline"
+                x1="0"
+                y1="90"
+                x2="800"
+                y2="90"
+            ></line>
+            <path
+                class="trace-draw"
+                d="M0,55
+                   L60,55
+                   L80,15
+                   L100,95
+                   L120,55
+                   L200,55
+                   L220,30
+                   L240,80
+                   L260,55
+                   L340,55
+                   L360,10
+                   L380,100
+                   L400,55
+                   L480,55
+                   L500,35
+                   L520,75
+                   L540,55
+                   L620,55
+                   L640,20
+                   L660,90
+                   L680,55
+                   L800,55"
+            />
+        </svg>
+
+        <!-- Contact links -->
+        <div class="pinrow">
+            <a
+                class="pin"
+                href="mailto:richardw83457@gmail.com"
+            >
+                richardw83457@gmail.com
+            </a>
+            <a
+                class="pin"
+                href="tel:+16463292846"
+            >
+                (646) 329-2846
+            </a>
+            <a
+                class="pin"
+                id="linkedin-pin"
+                href="#"
+                target="_blank"
+                rel="noopener"
+            >
+                LinkedIn
+            </a>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="wrap">
+            <div class="refdes"> ABOUT</div>
+            <h2 class="section-title">
+                Get to know me
+            </h2>
+            <div class="about-grid">
+                <!-- About text -->
+                <div class="about-text">
+                    <p>
+                        I'm a
+                        <strong>
+                            rising junior studying Electrical &amp; Computer Engineering at Cornell University
+                        </strong>,
+                        expecting to graduate December 2027.
+                        My coursework include but are not limited to robotics,
+                        microcontroller, computer architecture, embedded systems,
+                        microelectronics, and digital logic&mdash;and my projects tend
+                        to focus on embedded systems.
+                    </p>
+                    <p>
+                        Recent work includes building a real-time task scheduler
+                        for an embedded game console, implementing a subset of
+                        the RISC-V instruction set on an FPGA, and generating
+                        audio waveforms in hardware. I also have front-end web
+                        development experience from internship and volunteer work.
+                    </p>
+                </div>
+
+                <!-- Quick facts -->
+                <div class="facts">
+                    <div class="facts-title">
+                        Synopsis
+                    </div>
+
+                    <div class="fact-row">
+                        <span class="k">DEGREE</span>
+                        <span class="v">
+                            B.S. Electrical &amp; Computer Engineering
+                        </span>
+                    </div>
+
+                    <div class="fact-row">
+                        <span class="k">SCHOOL</span>
+                        <span class="v">
+                            Cornell University
+                        </span>
+                    </div>
+
+                    <div class="fact-row">
+                        <span class="k">GRAD</span>
+                        <span class="v">
+                            Expected Dec 2027
+                        </span>
+                    </div>
+                    <div class="chiplist">
+                        <span class="chip-sm">Robotics</span>
+                        <span class="chip-sm">Computer Architecture</span>
+                        <span class="chip-sm">Microcontrollers</span>
+                        <span class="chip-sm">Embedded Systems</span>
+                        <span class="chip-sm">Microelectronics</span>
+                        <span class="chip-sm">Digital Logic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="wrap">
+            <div class="refdes">&sect; EXPERIENCE</div>
+            <h2 class="section-title">
+                Where I've been
+            </h2>
+
+            <!-- Main experience timeline -->
+            <div class="timeline">
+
+                <!-- Experience 1 -->
+                <div class="tnode">
+
+                    <div class="tdate">
+                        JUL &mdash; AUG 2025
+                    </div>
+
+                    <div class="trole">
+                        Graphic Design &amp; Web Development Intern
+                    </div>
+
+                    <div class="torg">
+                        Infinity Educational Programs &middot; Virtual
+                    </div>
+
+                    <ul>
+                        <li>
+                            Designed digital posters, graphics, infographics,
+                            and websites using Squarespace and programming
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="tnode">
+
+                    <div class="tdate">
+                        OCT 2023 &mdash; MAY 2024
+                    </div>
+
+                    <div class="trole">
+                        Student
+                    </div>
+
+                    <div class="torg">
+                        CodeNation &middot; Manhattan, NY
+                    </div>
+
+                    <ul>
+                        <li>
+                            Developed webpages using JavaScript, HTML, and CSS
+                            through project-based learning with industry mentors
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="tnode">
+
+                    <div class="tdate">
+                        SEP 2022 &mdash; MAY 2024
+                    </div>
+
+                    <div class="trole">
+                        Section Chief Tournament Director
+                    </div>
+
+                    <div class="torg">
+                        Chess in the Schools &middot; NYC
+                    </div>
+
+                    <ul>
+                        <li>
+                            Led and mentored a section of younger workers,
+                            officiated four rounds of games, and enforced USCF rulings
+                        </li>
+
+                        <li>
+                            Coordinated tournament setup &mdash; checking in players
+                            and setting up hundreds of boards, pieces, and clocks
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="tnode">
+
+                    <div class="tdate">
+                        JUL &mdash; AUG 2023
+                    </div>
+
+                    <div class="trole">
+                        Student
+                    </div>
+
+                    <div class="torg">
+                        All Star Code &middot; Virtual
+                    </div>
+
+                    <ul>
+                        <li>
+                            Learned JavaScript, CSS, HTML, control flow, and DOM
+                            manipulation to create interactive webpages
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional experience -->
+            <div class="additional">
+
+                <div class="refdes">
+                    &sect; ADDITIONAL
+                </div>
+
+                <div class="add-list">
+
+                    <div class="add-item">
+                        <span class="role">
+                            Trophy Builder
+                        </span>
+
+                        <span class="org">
+                            &mdash; Chess in the Schools, Manhattan, NY
+                        </span>
+
+                        <span class="when">
+                            Summers of 2023  &mdash; 2026
+                        </span>
+                    </div>
+
+
+                    <div class="add-item">
+                        <span class="role">
+                            Fitness Monitor
+                        </span>
+
+                        <span class="org">
+                            &mdash; Cornell Fitness Centers, Ithaca, NY
+                        </span>
+
+                        <span class="when">
+                            Sept 2025  &mdash; Present
+                        </span>
+                    </div>
+
+
+                    <div class="add-item">
+                        <span class="role">
+                            Food Service Worker
+                        </span>
+                        
+                        <span class="org">
+                            &mdash; Cornell Dining, Ithaca, NY
+                        </span>
+
+                        <span class="when">
+                            Oct 2024  &mdash; May 2025
+                        </span>
+                    </div>
+
+
+                    <div class="add-item">
+                        <span class="role">
+                            Office Intern
+                        </span>
+
+                        <span class="org">
+                            &mdash; NYPD 68th Precinct, Brooklyn, NY
+                        </span>
+
+                        <span class="when">
+                            Jul  &mdash; Aug 2023
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="wrap">
+            <div class="refdes"> &sect; PROJECTS</div>
+            <h2 class="section-title">
+                What I've been working on
+            </h2>
+            <!-- JS generates the project cards here -->
+            <div
+                id="project-grid"
+                class="project-grid"
+            ></div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="wrap">
+            <div class="refdes"> &sect; SKILLS</div>
+            <h2 class="section-title">
+                What I've learned
+            </h2>
+            
+            <div class="bins">
+                <!-- Languages -->
+                <div class="bin">
+                    <div class="bin-label">
+                        Languages &amp; HDL
+                    </div>
+                    <div class="chiplist">
+                        <span class="chip-sm">Verilog</span>
+                        <span class="chip-sm">RISC-V ASM</span>
+                        <span class="chip-sm">ARMv6 ASM</span>
+                        <span class="chip-sm">C</span>
+                        <span class="chip-sm">Python</span>
+                        <span class="chip-sm">JavaScript</span>
+                        <span class="chip-sm">CSS</span>
+                        <span class="chip-sm">HTML</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="bin">
+                    <div class="bin-label">
+                        Tools &amp; Software
+                    </div>
+                    <div class="chiplist">
+                        <span class="chip-sm">VS Code</span>
+                        <span class="chip-sm">Quartus</span>
+                        <span class="chip-sm">LTspice</span>
+                        <span class="chip-sm">AutoCAD</span>
+                        <span class="chip-sm">Git / GitHub</span>
+                        <span class="chip-sm">Linux</span>
+                        <span class="chip-sm">MCUXpresso</span>
+                        <span class="chip-sm">Google &amp; MS Suite</span>
+                    </div>
+                </div>
+
+                <!-- Lab equipment -->
+                <div class="bin">
+                    <div class="bin-label">
+                        Lab Equipment
+                    </div>
+                    <div class="chiplist">
+                        <span class="chip-sm">Oscilloscope</span>
+                        <span class="chip-sm">Signal Generator</span>
+                        <span class="chip-sm">Multimeter</span>
+                        <span class="chip-sm">FPGA Boards</span>
+                        <span class="chip-sm">FRDM-KL46Z</span>
+                        <span class="chip-sm">Soldering</span>
+                        <span class="chip-sm">Crimping</span>
+                        <span class="chip-sm">Breadboarding</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT/FOOTER -->
+    <footer id="contact">
+        <div class="wrap">
+
+            <div class="refdes">
+                &sect; CONTACT
+            </div>
+
+            <div class="header-block">
+                <div>
+                    <h3>
+                        Connect with me here:
+                    </h3>
+                    <p>
+                        Open to internships and collaborations
+                    </p>
+                </div>
+                
+                <div class="pinrow">
+                    <a
+                        class="pin"
+                        href="mailto:richardw83457@gmail.com"
+                    >
+                        Email
+                    </a>
+                    <a
+                        class="pin"
+                        href="tel:+16463292846"
+                    >
+                        Call
+                    </a>
+                    <a
+                        class="pin"
+                        id="linkedin-pin-2"
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        LinkedIn
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div class="foot-note">
+                RICHARD WANG &middot; ELECTRICAL &amp; COMPUTER ENGINEERING &middot; CORNELL UNIVERSITY
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
