@@ -108,7 +108,7 @@ const projects = [
         role: "Collaborator \u2014 Cornell University",
 
         bullets: [
-            "Programmed BopIt on the FRDM-KL46Z using a real-time scheduler, LEDs, accelerometer, display,                            buttons, and a touch capacitor",
+            "Programmed BopIt on the FRDM-KL46Z using a real-time scheduler, LEDs, accelerometer, display, buttons, and a touch capacitor",
             "Randomly generates tasks with shrinking deadlines, speeding up over the course of the game"
         ],
         tags: [
@@ -179,8 +179,8 @@ const projects = [
         role: "Collaborator \u2014 All Star Code",
 
         bullets: [
-            "Designed and presented a website to track wildfires, spread awareness, and refer others to helpful                       resources",
-            "Developed the front-end composition and color scheme, gathered source information, and created the                       presentation"
+            "Designed and presented a website to track wildfires, spread awareness, and refer others to helpful resources",
+            "Developed the front-end composition and color scheme, gathered source information, and created the presentation"
         ],
         tags: [
             "HTML",
