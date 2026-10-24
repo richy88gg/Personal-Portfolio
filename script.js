@@ -59,6 +59,50 @@ typeMessage();
 const projects = [
 
     {
+        name: "Digital Galton Board ",
+        date: "Oct 2026",
+        role: "Collaborator \u2014 Cornell University",
+
+        bullets: [
+            "Simulated a digital galton board on VGA display with RP2350,
+            "Optimize codebase to allow for as many balls as possible (22,600)"
+        ],
+        tags: [
+            "C",
+            "RP2350",
+            "Computer Graphics",
+            "Optimization"
+        ],
+        links: [
+            {
+                label: "Demo",
+                url: "https://drive.google.com/file/d/1HfQkxCKmp5DBBNnOapSMzMGZwBr1P9vt/view?usp=sharing"
+            }
+        ]
+    },
+
+    {
+        name: "Birdsong Synthesizer ",
+        date: "Sept 2026",
+        role: "Collaborator \u2014 Cornell University",
+
+        bullets: [
+            "Created a synthesizer that can mimic bird songs via three modes: playback, record, and compose,
+            "Configure slide potentiometer to adjust ADC and keypad to choose tone generated via DDS"
+        ],
+        tags: [
+            "C",
+            "RP2350"
+        ],
+        links: [
+            {
+                label: "Demo",
+                url: "https://drive.google.com/file/d/1HfQkxCKmp5DBBNnOapSMzMGZwBr1P9vt/view?usp=sharing"
+            }
+        ]
+    },
+    
+    {
         name: "BopIt Mini! Embedded System",
         date: "May 2026",
         role: "Collaborator \u2014 Cornell University",
